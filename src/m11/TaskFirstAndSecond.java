@@ -9,7 +9,7 @@ public class TaskFirstAndSecond {
         List<String> name = List.of("Max", "Ivan", "Ira", "Petro", "Julia", "Bobo");
 
         System.out.println("Task first\n" + sortNames(name));
-        System.out.println("Task Second\n" + OutputNamesThroughComa(name));
+        System.out.println("Task Second\n" + outputNamesThroughComa(name));
     }
 
     public static String sortNames(List<String> names) {
@@ -19,7 +19,7 @@ public class TaskFirstAndSecond {
                 .collect(Collectors.joining(" "));
     }
 
-    public static String OutputNamesThroughComa(List<String> names) {
+    public static String outputNamesThroughComa(List<String> names) {
         return names.stream()
                 .map(String::toUpperCase)
                 .sorted(Comparator.reverseOrder())
